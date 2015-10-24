@@ -1,0 +1,26 @@
+install.packages("sets")
+library(sets)
+# https://inf.ug.edu.pl/~gmadejsk/io-niestac/laborator2.pdf
+
+#zmienne lingwistyczne  odległość	prędkość	przyspieszenie
+
+# opis plotow
+variables <- set(
+bmi =
+ fuzzy_partition(varnames =
+ c(niedow = 9.25, zdro = 21.75,
+ nadw = 27.5, otyl = 35),
+ sd = 3.0),
+a1c =
+ fuzzy_partition(varnames =
+ c(nisk = 4, norm = 5.25, wys = 7),
+ FUN = fuzzy_cone, radius = 5),
+rating =
+ fuzzy_partition(varnames =
+ c(odm = 10, stand = 5, pref = 1),
+ FUN = fuzzy_cone, radius = 5),
+bp =
+ fuzzy_partition(varnames =
+ c(norm = 0, mnadcis = 10, nadcis = 20,
+ dnadci = 30), sd = 2.5)
+ )

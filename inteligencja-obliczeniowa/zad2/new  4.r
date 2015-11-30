@@ -32,7 +32,7 @@ variables <- set(
 						malePlus = fuzzy_trapezoid(corners =powieksz( c(-0.1,0,0,0.4))),
 #						maleMinus = fuzzy_triangular(corners =powieksz( c(-0.4,0,0.1))),
 #						malePlus = fuzzy_triangular(corners =powieksz( c(-0.1,0,0.4))),
-						duzePlus = fuzzy_trapezoid(corners =powieksz( c(0,0.4,maxPlus,maxPlus)))
+						duzePlus = fuzzy_trapezoid(corners = powieksz( c(0,0.4,maxPlus,maxPlus)))
 		)
 )
  
@@ -57,8 +57,8 @@ print(system)
 plot(system) 
 
 #fi <- fuzzy_inference(system, list(odległosc = 30, predkosc=50))
-fi <- fuzzy_inference(system, list(odległosc = 100, predkosc=50))
-#fi <- fuzzy_inference(system, list(odległosc = 30, predkosc=65))
+#fi <- fuzzy_inference(system, list(odległosc = 100, predkosc=50))
+fi <- fuzzy_inference(system, list(odległosc = 30, predkosc=65))
 plot(fi)
 
 gset_defuzzify(fi, "centroid")

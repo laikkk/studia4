@@ -1,0 +1,37 @@
+cor(iris[1],iris[2],method= "pearson")
+
+1,2
+1,3
+1,4
+
+2,3
+2,4
+
+3,2
+
+> cor(iris[1],iris[2],method= "pearson")
+            sepalwidth
+sepallength -0.1093692
+> cor(iris[1],iris[3],method= "pearson")
+            petallength
+sepallength   0.8717542
+> cor(iris[1],iris[4],method= "pearson")
+            petalwidth
+sepallength  0.8179536
+> cor(iris[2],iris[3],method= "pearson")
+           petallength
+sepalwidth  -0.4205161
+> cor(iris[2],iris[4],method= "pearson")
+           petalwidth
+sepalwidth -0.3565441
+> cor(iris[3],iris[2],method= "pearson")
+            sepalwidth
+petallength -0.4205161
+
+#c) Czy w każdym z przypadków korelacja była dodatnia czy ujemna? Czy była silna (0.7-1), słaba
+(0.2-0.7) czy w ogóle jej brakło (0-0.2)? Zinterpretuj wyniki.
+
+silna iris[1],iris[3] iris[1],iris[4]
+
+
+#Wariancja (w wielkim uproszczeniu, bez uwzględnienia obciążenia estymatora) jest to odchylenie standardowe podniesione do kwadratu. ednakże w procesie obliczeń to wariancja jest pierwsza. Najpierw obliczamy wariancję, a dopiero wtedy odchylenie standardowe, wyciągając pierwiastek z wartości wariancji.

@@ -1,0 +1,4 @@
+testanalyzerdb
+TestAnalyzer1
+
+Data Source=ah921jqliq.database.windows.net;Initial Catalog=testanalyzerdb;Persist Security Info=True;User ID=testanalyzerdb;Password=TestAnalyzer1

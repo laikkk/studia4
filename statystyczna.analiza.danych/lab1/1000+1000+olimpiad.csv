@@ -1,0 +1,51 @@
+nr;1;2;3;4;5;6;∑ min;∑ max;klasa;szkoła;miasto;wiek
+GD01;6;0;0;6;6;0;18;18;III;III LO im.Mar.Woj. RP;Gdynia;12
+GD02;6;0;2;5;0;0;13;13;II;III LO im.Mar.Woj. RP;Gdynia;16
+GD03;;;;;;;0;0;I;III LO im.Mar.Woj. RP;Gdynia;13
+GD04;0;0;0;0;0;0;0;0;II;V LO im.Stefana Żeromskiego;Gdańsk;12
+GD05;6;6;6;6;6;0;30;30;;III LO im.Mar.Woj. RP;Gdynia;13
+GD06;6;6;6;6;6;0;30;30;II;III LO im.Mar.Woj. RP;Gdynia;15
+GD07;0;0;;2;0;;2;2;I;III LO im.Mar.Woj. RP;Gdynia;14
+GD08;;;;;;;0;0;II;III LO im.Mar.Woj. RP z oddz. Dwujęzycznym;Gdynia;14
+GD09;0;0;0;;0;0;0;0;III;III LO im.Mar.Woj. RP;Gdynia;12
+GD10;2;0;0;0;6;0;8;8;III;V LO im.Stefana Żeromskiego;Gdańsk;13
+GD11;6;0;2;2;2;0;12;12;III;XX LO im. Zbigniewa Herberta;Gdańsk;15
+GD12;6;0;2;0;6;0;14;14;III;XX LO im. Zbigniewa Herberta;Gdańsk;15
+GD13;6;0;6;2;0;0;14;14;I;III LO im.Mar.Woj. RP;Gdynia;12-latek
+GD14;6;0;0;2;0;0;8;8;III;V LO im.Stefana Żeromskiego;Gdańsk;14-latek
+GD15;0;0;0;2;6;0;8;8;III;Gimnazjum katolickie im.Jana Pawła II;Gdynia;15-latek
+GD16;0;0;2;0;0;0;2;2;II;Katolickie Liceum Ogólnokształcące;Gdynia;16-latek
+GD17;6;;0;2;6;0;14;14;III;XX LO im. Zbigniewa Herberta;Gdańsk;17-latek
+GD18;5;5;0;5;5;0;20;20;I;III LO im.Mar.Woj. RP;Gdynia;13-latek
+GD19;6;0;0;0;0;0;6;6;;VIII LO im. KEN;Gdańsk;15-latek
+GD20;5;0;2;0;0;0;7;7;III;III LO im.Mar.Woj. RP;Gdynia;16-latek
+GD21;0;0;;;0;0;0;0;II;III LO im.Mar.Woj. RP z oddz. Dwujęzycznym;Gdynia;17-latek
+GD22;6;6;0;6;6;0;24;24;III;III LO im.Mar.Woj. RP;Gdynia;14-latek
+GD23;6;0;0;6;6;0;18;18;I;III LO im.Mar.Woj. RP;Gdynia;14-latek
+GD24;0;0;2;5;0;0;7;7;;III Liceum im.Bohaterów Westerplatte;Gdańsk;14-latek
+GD25;5;0;0;;0;0;5;5;I;XX LO im. Zbigniewa Herberta;Gdańsk;13-latek
+GD26;6;0;0;0;0;;6;6;III;V LO im.Stefana Żeromskiego;Gdańsk;12-latek
+GD27;6;6;;6;6;0;24;24;I;III LO im. Mar.Woj.RP;Gdynia;14-latek
+GD28;0;2;0;0;0;0;2;2;III;III LO im.Mar.Woj. RP;Gdynia;15-latek
+GD29;0;0;0;6;0;;6;6;II;III LO im.Mar.Woj. RP;Gdynia;12-latek
+GD30;0;;0;0;0;0;0;0;I;III LO im.Mar.Woj. RP;Gdynia;11
+GD31;5;6;0;6;6;2;25;25;III;III LO im.Mar.Woj. RP;Gdynia;11
+GD32;6;6;6;6;6;6;36;36;III;Ogólnokształcąca Szkoła Muzyczna I i II stopnia im.F.Nowowiejskiego;Gdańsk;16-latek
+GD33;6;;6;6;6;5;29;29;I;III LO im.Mar.Woj. RP;Gdynia;13-latek
+GD34;0;6;0;;6;0;12;12;III;XX LO im. Zbigniewa Herberta;Gdańsk;11
+GD35;6;0;5;6;6;2;25;25;I;III LO im.Mar.Woj. RP;Gdynia;12-latek
+GD36;6;0;0;;;;6;6;II;I LO;Lębork;13-latek
+GD37;6;0;2;0;0;0;8;8;I;III LO im.Mar.Woj. RP;Gdynia;15-latek
+GD38;6;6;0;0;5;0;17;17;III;III LO im.Mar.Woj. RP;Gdynia;14-latek
+GD39;6;0;0;6;6;0;18;18;I;III LO im.Mar.Woj. RP;Gdynia;15-latek
+GD40;;;;;;;0;0;III;III LO im.Mar.Woj. RP;Gdynia;11
+GD41;6;0;0;6;6;5;23;23;II;III LO im.Mar.Woj. RP;Gdynia;12
+GD42;6;6;6;5;6;2;31;31;III;III LO im.Mar.Woj. RP;Gdynia;12-latek
+GD43;6;0;6;0;0;0;12;12;II;Katolickie Liceum Ogólnokształcące;Gdynia;16-latek
+GD44;6;0;5;6;0;0;17;17;I;III LO im.Mar.Woj. RP;Gdynia;12-latek
+GD45;6;0;6;6;0;2;20;20;III;I LO im.Króla Jana III Sobieskiego;Wejherowo;14-latek
+GD46;6;0;0;0;0;0;6;6;I;III LO im.Mar.Woj. RP;Gdynia;13-latek
+GD47;6;0;0;2;0;;8;8;II;III LO im.Mar.Woj. RP;Gdynia;13-latek
+GD48;5;6;0;6;6;0;23;23;III;XX LO im. Zbigniewa Herberta;Gdańsk;15-latek
+GD49;6;0;0;6;0;0;12;12;III;III LO im.Mar.Woj. RP;Gdynia;12-latek
+PO01;6;0;0;;;;6;6;II;VIII LO im. A.Mickiewicza;Poznań Wielkopolskie;13-latek

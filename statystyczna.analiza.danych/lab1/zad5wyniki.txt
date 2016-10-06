@@ -1,0 +1,12 @@
+Srednia:
+12.64
+Minimum:
+0
+Maximum:
+36
+Pierwszy Qwartyl
+6
+Drugi Qwartyl
+12
+Trzeci Qwartyl
+20

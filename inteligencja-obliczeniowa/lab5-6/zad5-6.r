@@ -103,21 +103,8 @@ plot(diabetes_ctree)
 
 # Wykres
 
-plot(
-	c(knn_1_fpr_tpr[1], knn_3_fpr_tpr[1], knn_5_fpr_tpr[1], knn_11_fpr_tpr[1], naive_bayes_fpr_tpr[1]),
-	c(knn_1_fpr_tpr[2], knn_3_fpr_tpr[2], knn_5_fpr_tpr[2], knn_11_fpr_tpr[1], naive_bayes_fpr_tpr[2]),
-	xlab="FPR",
-	ylab="TPR",
-	main="Klasyfikatory", 
-	ylim=0:1, xlim=0:1, 
-	col=c(1,2,3,4,5)
-)
-legend(0.77,
-	1,
-	c('KNN k = 1', 'KNN k = 3', 'KNN k = 5', 'KNN k = 11', 'naiveBayes'),
-	col=c(1, 2, 3, 4, 5),
-	pch=c(1,1,1,1,1)
-)
+plot(c(knn_1_fpr_tpr[1], knn_3_fpr_tpr[1], knn_5_fpr_tpr[1], knn_11_fpr_tpr[1], naive_bayes_fpr_tpr[1]),c(knn_1_fpr_tpr[2], knn_3_fpr_tpr[2], knn_5_fpr_tpr[2], knn_11_fpr_tpr[1], naive_bayes_fpr_tpr[2]),	xlab="FPR",	ylab="TPR",	main="Klasyfikatory", ylim=0:1, xlim=0:1, col=c(1,2,3,4,5))
+legend(0.77,1,	c('KNN k = 1', 'KNN k = 3', 'KNN k = 5', 'KNN k = 11', 'naiveBayes'),col=c(1, 2, 3, 4, 5),pch=c(1,1,1,1,1))
 
 # zad 6.
 

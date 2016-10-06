@@ -1,0 +1,590 @@
+iris
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE)
+iris
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
+iris
+library(ggvis)
+head(iris)
+str(iris)
+table(iris$Species)
+round(prop.table(table(iris$Species)) * 100, digits = 1)
+summary(iris)
+summary(iris[c("Petal.Width", "Sepal.Width")])
+library(class)
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE)
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
+round(prop.table(table(iris$Species)) * 100, digits = 1)
+library(class)
+normalize <- function(x) {#
+num <- x - min(x)#
+denom <- max(x) - min(x)#
+return (num/denom)#
+}
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))
+summary(iris_norm)
+set.seed(1234)
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.67, 0.33))
+iris.training <- iris[ind==1, 1:4]
+iris.test <- iris[ind==2, 1:4]
+iris.trainLabels <- iris[ind==1, 5]
+iris.testLabels <- iris[ind==2, 5]
+iris_pred <- knn(train = iris.training, test = iris.test, cl = iris.trainLabels, k=3)
+iris_pred
+install.packages("gmodels")
+library(gmodels)
+CrossTable(x = iris.testLabels, y = iris_pred, prop.chisq=FALSE)
+iris_pred
+iris_test
+iris.test
+iris.trainLabels
+iris.training
+iris.testLabels
+c[iris_prop,iris.testLabels]
+c[iris_pred,iris.testLabels]
+iris_pred + iris.testLabels
+iris_pred + iris.testLabels.class
+iris_pred + iris.testLabels
+iris.testLabels.class
+iris.testLabels.id
+iris.testLabels
+data$predict = iris_pred
+data$predict = c[iris_pred]
+iris_pred
+info(iris_pred)
+typesof(iris_pred)
+typeof(iris_pred)
+class(iris_pred)
+class(iris.testLabels)
+c(as.character(iris_pred[,2]), as.character(iris.testLabels) )
+c(as.character(iris_pred), as.character(iris.testLabels) )
+rbind(iris_pred, iris.testLabels)
+iris_pred
+head(iris_pred)
+dataFrame$test <- iris_pred
+dataFrame$test <- as.dataFrame(iris_pred)
+dataFrame$test <- as.character(iris_pred)
+test <- as.character(iris_pred
+)
+test
+as.character(iris_pred) + as.character(iris.testLabels)
+data.frame(as.character(iris_pred) , as.character(iris.testLabels))
+for (index in 1:nrow(dataFrame)) { row = dataFrame[index, ]; # do stuff with the row }
+źć
+evaluations = data.frame(as.character(iris_pred) , as.character(iris.testLabels))
+evaluations
+for (index in 1:nrow(evaluations)) { row = evaluations[index, ]; row }
+for (index in 1:nrow(evaluations)) { row = evaluations[index, ]; print(row) }
+for (index in 1:nrow(evaluations)) { row = evaluations[index, ]; echo(row) }
+data.frame(iris_pred, iris.testLabels)
+evaluations = data.frame(iris_pred, iris.testLabels)
+for (index in 1:nrow(evaluations)) { row = evaluations[index, ]; print(row) }
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+#
+summary(iris)#
+#
+library(class)#
+#
+normalize <- function(x) {#
+num <- x - min(x)#
+denom <- max(x) - min(x)#
+return (num/denom)#
+}#
+#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+set.seed(1234)#
+#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.67, 0.33))#
+#
+iris.training <- iris[ind==1, 1:4]#
+#
+iris.test <- iris[ind==2, 1:4]#
+#
+iris.trainLabels <- iris[ind==1, 5]#
+#
+iris.testLabels <- iris[ind==2, 5]#
+#
+iris_pred <- knn(train = iris.training, test = iris.test, cl = iris.trainLabels, k=3)#
+#
+#You see that the model makes reasonably accurate predictions, with the exception of one wrong classification in row 29, where "Versicolor” was predicted while the test label is “Virginica”.#
+#
+install.packages("gmodels")#
+#
+library(gmodels)#
+#
+evaluations = data.frame(iris_pred, iris.testLabels)#
+#
+#to do napisac funkcje ktora obliczy ile sie wierszy sie ze soba zgadza podac liczbe i procent np 39/40 98%#
+for (index in 1:nrow(evaluations)) { row = evaluations[index, ]; print(row) } #
+#
+CrossTable(x = iris.testLabels, y = iris_pred, prop.chisq=FALSE)
+install.packages("RWeka")
+library(party)#
+#
+install.packages("partykit")#
+library("partykit")#
+#
+install.packages('e1071')#
+library(e1071)
+str(iris)
+iris_ctree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data=iris)
+library(e1071)#
+library(class)#
+#
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+summary(iris)#
+normalize <- function(x) {#
+num <- x - min(x)#
+denom <- max(x) - min(x)#
+return (num/denom)#
+}#
+#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.67, 0.33))#
+#
+iris.training <- iris[ind==1, 1:4]#
+iris.test <- iris[ind==2, 1:4]#
+iris.trainLabels <- iris[ind==1, 5]#
+iris.testLabels <- iris[ind==2, 5]#
+#
+# naiveBayes(iris.training, iris.test)#
+classifier<-naiveBayes(iris[,1:4], iris[,5]) #
+table(predict(classifier, iris[,-5]), iris[,5])
+package.install(neuralnet)
+install.package("neuralnet")
+install.packages('neuralnet')
+n = c(2, 3, 5) #
+s = c("aa", "bb", "cc") #
+b = c(TRUE, FALSE, TRUE) #
+df = data.frame(n, s, b)
+df
+siatk.nn <- neuralnet(gra~wiek+waga+wzrost, siatk.dane, hidden=2, lifesign="full")
+install.packages('neuralnet')
+siatk.nn <- neuralnet(gra~wiek+waga+wzrost, siatk.dane, hidden=2, lifesign="full")
+library(neuralnet)
+siatk.nn <- neuralnet(gra~wiek+waga+wzrost, siatk.dane, hidden=2, lifesign="full")
+siatk.dane <- read.table(header=TRUE, text='#
+	wiek waga wzrost gra#
+	23 75 176 TRUE#
+	25 67 180 TRUE#
+	28 120 175 FALSE#
+	22 65 165 TRUE#
+	46 70 187 TRUE#
+	50 68 180 FALSE#
+	48 97 178 FALSE#
+')
+siatk.nn <- neuralnet(gra~wiek+waga+wzrost, siatk.dane, hidden=2, lifesign="full")
+plot(siatk.nn)
+myfunAktywacji <- function(x) {#
+ return ( 1/(1+exp(-x)) )#
+}#
+#
+WezelA <- function(wiek, waga, wzrost){#
+#
+	X = wiek * -0.46122 + waga * 0.97314 + wzrost * -0.39203 + 0.80109#
+	X = myfunAktywacji(X)#
+	return(X)#
+}#
+#
+WezelB <- function(wiek, waga, wzrost){#
+#
+	X = wiek * -0.78548 + waga * 2.10584 + wzrost * -0.57847 + 0.43529#
+	X = myfunAktywacji(X)#
+	return(X)#
+}#
+#
+WezelC <- function(wiek, waga, wzrost){#
+A = WezelA(wiek, waga, wzrost)#
+B = WezelB(wiek, waga, wzrost)#
+X = A  * -0.81546 + B * 1.03775 + -0.2368#
+#
+	return(X)#
+}
+WezelC(23,75,176)
+WezelC(25,67,180)
+WezelC(48,97,178)
+sqr(4)
+sq(4)
+sqrt(4)
+sqrt( (5-2.75)^2 + (6-4)^2 )
+sqrt( (7-2.75)^2 + (6-3.66)^2 )
+sqrt( (7-5)^2 + (6-3.66)^2 )
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE)
+iris
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
+iris
+a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))
+normalize <- function(x) {#
+	num <- x - min(x)#
+	denom <- max(x) - min(x)#
+	return (num/denom)#
+}
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))
+iris_norm
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))
+install.packages("ggplot2")
+install.packages("ggplot2")
+ind
+iris.training <- iris[ind==1, 1:4]#
+iris.test <- iris[ind==2, 1:4]
+install.packages("neuralnet")
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')#
+#
+normalize <- function(x) {#
+	num <- x - min(x)#
+	denom <- max(x) - min(x)#
+	return (num/denom)#
+}#
+#
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:4]#
+iris.test <- iris[ind==2, 1:4]#
+#
+# c) Zainstlauj i załaduj paczkę neuralnet. Uruchom komendę neuralnet na zbiorze treningowym.#
+# Problem może stanowić klasa, która nie ma danych logicznych (TRUE/FALSE), dlatego możesz#
+# posiłkować się pomysłem z tutoriala: http://hodgett.co.uk/get-started-with-neural-networks-in-r/#
+#
+install.packages("neuralnet")#
+#
+iris.training$setosa <- c(iris.training$Species == ‘setosa’)#
+iris.training$versicolor <- c(iris.training$Species == ‘versicolor’)#
+iris.training$virginica <- c(iris.training$Species == ‘virginica’)#
+iris.training$Species <- NULL
+iris.training
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')#
+#
+normalize <- function(x) {#
+	num <- x - min(x)#
+	denom <- max(x) - min(x)#
+	return (num/denom)#
+}#
+#
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]#
+#
+# c) Zainstlauj i załaduj paczkę neuralnet. Uruchom komendę neuralnet na zbiorze treningowym.#
+# Problem może stanowić klasa, która nie ma danych logicznych (TRUE/FALSE), dlatego możesz#
+# posiłkować się pomysłem z tutoriala: http://hodgett.co.uk/get-started-with-neural-networks-in-r/#
+#
+install.packages("neuralnet")#
+#
+iris.training$setosa <- c(iris.training$Species == ‘setosa’)#
+iris.training$versicolor <- c(iris.training$Species == ‘versicolor’)#
+iris.training$virginica <- c(iris.training$Species == ‘virginica’)#
+iris.training$Species <- NULL
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]
+iris
+iris.training
+iris.training$setosa <- c(iris.training$Species == ‘setosa’)
+iris.training$setosa <- c(iris.training$Species == `setosa`)
+iris.training$setosa <- c(iris.training$Species == "setosa")
+iris.training
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]
+iris.training$setosa <- c(iris.training$Species == "Iris-setos")
+iris.training
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]
+iris.training$setosa <- c(iris.training$Species == "Iris-setosa")
+iris.training
+iris.training$versicolor <- c(iris.training$Species == "Iris-versicolor")#
+iris.training$virginica <- c(iris.training$Species == "Iris-virginica")
+iris.training
+iris.training$Species <- NULL
+iris.training
+normalize <- function(x) {#
+	num <- x - min(x)#
+	denom <- max(x) - min(x)#
+	return (num/denom)#
+}#
+#
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]#
+#
+# c) Zainstlauj i załaduj paczkę neuralnet. Uruchom komendę neuralnet na zbiorze treningowym.#
+# Problem może stanowić klasa, która nie ma danych logicznych (TRUE/FALSE), dlatego możesz#
+# posiłkować się pomysłem z tutoriala: http://hodgett.co.uk/get-started-with-neural-networks-in-r/#
+#
+install.packages("neuralnet")#
+library(neuralnet)#
+#
+iris.training$setosa <- c(iris.training$Species == "Iris-setosa")#
+iris.training$versicolor <- c(iris.training$Species == "Iris-versicolor")#
+iris.training$virginica <- c(iris.training$Species == "Iris-virginica")#
+#
+iris.training$Species <- NULL
+inet <- neuralnet(setosa + versicolor + virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+inet <- neuralnet(setosa + versicolor + virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+inet <- neuralnet(Iris-setosa + Iris-versicolor + Iris-virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+inet <- neuralnet(Iris-setosa + Iris-versicolor + Iris-virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+neuralnet(Iris-setosa + Iris-versicolor + Iris-virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+iris.training
+neuralnet("Iris-setosa" + "Iris-versicolor" + "Iris-virginica" )
+neuralnet("Iris-setosa" + "Iris-versicolor" + "Iris-virginica" ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+iris.training
+inet <- neuralnet(setosa + versicolor + virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign=”full”)
+inet <- neuralnet(setosa + versicolor + virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign="full")
+plot(inet, rep=”best”)
+plot(inet, rep="best")
+predict <- compute(inet, iris[1:4])
+predict$net.result
+result<-0#
+#
+for (i in 1:150) { result[i] <- which.max(predict$net.result[i,]) }
+for (i in 1:150) { if (result[i]==1) {result[i] = "setosa"} }#
+#
+for (i in 1:150) { if (result[i]==2) {result[i] = "versicolor"} }#
+#
+for (i in 1:150) { if (result[i]==3) {result[i] = "virginica"} }
+comparison <- iris#
+#
+comparison$Predicted <- result
+comparison
+comparison
+thisSame = 0#
+for (i in 1:150) { if (length(grep(comparison$Species,comparison$Predicted))>0) { thisSame = thisSame+1; }
+thisSame
+;
+c
+thisSame = 0#
+for (i in 1:150) { if (length(grep(comparison$Species,comparison$Predicted))>0) { thisSame = thisSame+1; } }
+length(grep(comparison[1]$Species,comparison[1]$Predicted)
+)
+length(grep(comparison[1]$Species,comparison[1]$Predicted))
+length(grep(comparison[1]$Species+"",comparison[1]$Predicted+""))
+comparison[1]$Species
+comparison
+comparison$Species
+comparison[0]$Species
+comparison$Species[0]
+comparison$Species
+comparison$Species[0]
+comparison
+comparison$Species[0]
+comparison[0]$Species
+comparison[0]
+comparison[1,5]
+length(grep(comparison[1,5],comparison[1,6]))
+thisSame = 0#
+for (i in 1:150) { if( length(grep(comparison[i,5],comparison[i,6])) >0) { thisSame = thisSame+1; } }
+thisSame
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) #
+#
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")#
+# a) Znormalizuj kolumny liczbowe bazy danych irysów, wzorem (x-min(x))/(max(x)-min(x)).#
+iris_norm <- as.data.frame(lapply(iris[1:4], normalize))#
+#
+# b) Podziel zbiór irysów na iris.train, iris.test tak, jak robiliśmy to przy innych algorytmach#
+# klasyfikujących. Proporcje mogą być 70/30.#
+#
+set.seed(1234)#
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))#
+iris.training <- iris[ind==1, 1:5]#
+iris.test <- iris[ind==2, 1:5]#
+#
+# c) Zainstlauj i załaduj paczkę neuralnet. Uruchom komendę neuralnet na zbiorze treningowym.#
+# Problem może stanowić klasa, która nie ma danych logicznych (TRUE/FALSE), dlatego możesz#
+# posiłkować się pomysłem z tutoriala: http://hodgett.co.uk/get-started-with-neural-networks-in-r/#
+#
+install.packages("neuralnet")#
+library(neuralnet)#
+#
+iris.training$setosa <- c(iris.training$Species == "Iris-setosa")#
+iris.training$versicolor <- c(iris.training$Species == "Iris-versicolor")#
+iris.training$virginica <- c(iris.training$Species == "Iris-virginica")#
+#
+iris.training$Species <- NULL#
+#
+# d) Zewaluuj klasyfikator uruchamiając komendę compute na zbiorze testowym. Oszacuj jaki#
+# gatunek zostanie przyporządkowany każdemu z irysów np. korzystając z pomysłu z powyższego#
+# tutoriala. Podaj ile irysów (%) zostało poprawnie sklasyfikowanych.#
+#
+inet <- neuralnet(setosa + versicolor + virginica ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, iris.training, hidden=3, lifesign="full")#
+#
+plot(inet, rep="best")#
+#
+predict <- compute(inet, iris[1:4])#
+#
+predict$net.result #
+#
+result<-0#
+#
+for (i in 1:150) { result[i] <- which.max(predict$net.result[i,]) }#
+for (i in 1:150) { if (result[i]==1) {result[i] = "Iris-setosa"} }#
+#
+for (i in 1:150) { if (result[i]==2) {result[i] = "Iris-versicolor"} }#
+#
+for (i in 1:150) { if (result[i]==3) {result[i] = "Iris-virginica"} }#
+#
+comparison <- iris#
+#
+comparison$Predicted <- result
+thisSame = 0#
+for (i in 1:150) { if( comparison[i,5] == comparison[i,6] ) > 0 { thisSame = thisSame+1; } }
+thisSame = 0#
+for (i in 1:150) { if( comparison[i,5] == comparison[i,6] ) { thisSame = thisSame+1; } }
+thisSame
+thisSame/150
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')#
+#
+titanic.raw <- read.csv("titanic.raw.rdata", header = FALSE);
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')#
+#
+titanic.raw <- read.csv("titanic.raw.rdata",sep=',' header = FALSE);
+setwd('/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new')#
+#
+titanic.raw <- read.csv("titanic.raw.rdata",sep=',', header = FALSE);
+load("/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new/titanic.raw.rdata")
+load("/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new/titanic.raw.rdata")
+str(titanic.raw)
+library(arules)
+library("arules")
+install.packages("arules")#
+library(arules)
+rules <- apriori(titanic.raw)#
+inspect(rules)
+rules <- apriori(titanic.raw,#
+  + parameter = list(minlen=2, supp=0.005, conf=0.8),#
+  + appearance = list(rhs=c("Survived=No", "Survived=Yes"),#
+  + default="lhs"),#
+  + control = list(verbose=F))#
+rules.sorted <- sort(rules, by="lift")#
+inspect(rules.sorted)
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c("Survived=No", "Survived=Yes"), default="lhs"), control = list(verbose=F))
+rules.sorted <- sort(rules, by="lift")#
+inspect(rules.sorted)
+# find redundant rules#
+subset.matrix <- is.subset(rules.sorted, rules.sorted)#
+subset.matrix[lower.tri(subset.matrix, diag=T)] <- NA#
+redundant <- colSums(subset.matrix, na.rm=T) >= 1#
+which(redundant)#
+#
+# remove redundant rules#
+rules.pruned <- rules.sorted[!redundant]#
+inspect(rules.pruned)
+library(arulesViz)#
+plot(rules)
+plot(rules, method="graph", control=list(type="items"))
+load("/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new/titanic.raw.rdata")#
+#
+install.packages("arules")#
+library(arules)#
+#
+rules <- apriori(titanic.raw)#
+inspect(rules)#
+#
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c("Survived=No", "Survived=Yes"), default="lhs"), control = list(verbose=F))#
+rules.sorted <- sort(rules, by="lift")#
+inspect(rules.sorted)#
+# find redundant rules#
+subset.matrix <- is.subset(rules.sorted, rules.sorted)#
+subset.matrix[lower.tri(subset.matrix, diag=T)] <- NA#
+redundant <- colSums(subset.matrix, na.rm=T) >= 1#
+which(redundant)#
+#
+# remove redundant rules#
+rules.pruned <- rules.sorted[!redundant]#
+inspect(rules.pruned)#
+#
+library(arulesViz)#
+plot(rules)
+load("/Users/kamilzie/Documents/git/studia4/inteligencja-obliczeniowa/lab7-8/new/titanic.raw.rdata")#
+#
+install.packages("arules")#
+library(arules)#
+#
+rules <- apriori(titanic.raw)#
+inspect(rules)#
+#
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c("Survived=No", "Survived=Yes"), default="lhs"), control = list(verbose=F))#
+rules.sorted <- sort(rules, by="lift")#
+inspect(rules.sorted)#
+# find redundant rules#
+subset.matrix <- is.subset(rules.sorted, rules.sorted)#
+subset.matrix[lower.tri(subset.matrix, diag=T)] <- NA#
+redundant <- colSums(subset.matrix, na.rm=T) >= 1#
+which(redundant)#
+#
+# remove redundant rules#
+rules.pruned <- rules.sorted[!redundant]#
+inspect(rules.pruned)#
+#
+install.packages("arulesViz")#
+library(arulesViz)#
+plot(rules)
+plot(rules, method="graph", control=list(type="items"))
+plot(rules, method="paracoord", control=list(reorder=TRUE))
+plot(rules, method="graph", control=list(type="items"))

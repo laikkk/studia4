@@ -1,0 +1,2 @@
+#!/bin/bash
+exec java -jar $HOME/apps/Jape/Jape.jar -engine $HOME/apps/Jape/jape_engine $HOME/apps/Jape/examples/natural_deduction/I2L.jt

@@ -93,6 +93,7 @@ iris.testLabels <- iris[ind==2, 5]
 # naiveBayes(iris.training, iris.test)
 classifier<-naiveBayes(iris[,1:4], iris[,5]) 
 table(predict(classifier, iris[,-5]), iris[,5])
+# na testowym
 
 # lub
 
@@ -106,6 +107,7 @@ table(predict(classifier, iris[,-5]), iris[,5])
 
 # zad 4 ??
 library(class)
+install.packages("Formula")
 
 install.packages("party")
 library(party)
@@ -116,8 +118,8 @@ library("partykit")
 install.packages('e1071')
 library(e1071)
 
-install.packages("RWeka") #, dependencies = TRUE
-library("RWeka")
+# install.packages("RWeka") #, dependencies = TRUE
+# library("RWeka")
 
 str(iris)
 iris_ctree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data=iris)
@@ -125,7 +127,6 @@ print(iris_ctree)
 plot(iris_ctree) # plot(iris_ctree, type="simple")
 
 # ewaluacja
-# U mnie to nie działało, ale zbytnio się nie czepiał jak się tego nie miało.
 
 m1 <- J48(class ~ sepallength + sepalwidth + petallength + petalwidth, data=iris)
 plot(m1)
